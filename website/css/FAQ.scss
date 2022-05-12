@@ -1,0 +1,259 @@
+$black: #0d0d0d;
+$white: #f2f2f2;
+$yellow: #f2cc0f;
+$green: #8cbf3f;
+$purple: #9453a6;
+$headlines: "Pattaya", sans-serif;
+$headlines2: "Henny Penny", cursive;
+$text: "Roboto", sans-serif;
+p {
+  font-family: $text;
+}
+
+h1 {
+  font-family: $headlines;
+}
+
+body {
+  background-image: url(/photos/background3.png);
+}
+
+nav {
+  font-family: $headlines;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: $black;
+  padding: 16px 32px;
+  border-bottom: 3px solid $purple;
+  opacity: 0.5;
+  transition-duration: 0.5s;
+}
+
+nav:hover {
+  opacity: 1;
+}
+
+#logo {
+  width: 10rem;
+}
+
+#logo:hover {
+  transform: rotate(-45deg);
+  transition: 0.4s;
+}
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  user-select: none;
+
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  margin-right: -2rem;
+}
+
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 98;
+  background-color: $black;
+  padding-top: 120px;
+}
+
+.a {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 16px;
+  margin-top: 120px;
+  padding: 12px 16px;
+  background-color: $black;
+  color: $white;
+  text-decoration: none;
+  border-bottom: 2px solid $purple;
+}
+
+.a:hover {
+  background-color: $purple;
+  color: $yellow;
+}
+
+.mobileNav.is-active {
+  left: 0;
+  transition: 2s;
+}
+
+.hamburger span {
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background-color: $white;
+  border-radius: 6px;
+  z-index: 1;
+
+  transform: 0, 0;
+
+  transition: 0.4s;
+}
+
+.hamburger:hover span:nth-child(2) {
+  transform: translateX(10px);
+  background-color: $purple;
+}
+
+.hamburger.is-active span:nth-child(1) {
+  transform: translateY(-5px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translateY(-22px) rotate(-45deg);
+}
+
+.hamburger.is-active:hover span {
+  background-color: $purple;
+}
+
+.menu {
+  display: none;
+  justify-content: flex-end;
+  margin: 0 -16px;
+}
+
+.menu a {
+  color: $white;
+  margin: 0 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.menu a.is-active,
+.menu a:hover {
+  background-color: $purple;
+  color: $yellow;
+}
+
+@media (min-width: 760px) {
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+}
+
+// acordion
+#questions {
+  margin-top: 198px;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-headline {
+  font-family: $headlines;
+}
+
+.faq-inside {
+  font-family: $text;
+}
+
+//footer
+
+footer {
+  background: $black;
+  color: $white;
+  padding: 3em;
+  height: auto;
+  margin-top: auto;
+  font-family: $text;
+}
+
+.name-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 0.25em;
+}
+
+.footer-img {
+  width: 30px;
+  height: 60px;
+  margin-right: 1rem;
+}
+
+.footer-img:hover {
+  border: solid $white 1px;
+}
+
+.footer-img1 {
+  width: 30px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.footer-img1:hover {
+  border: solid $white 1px;
+}
+
+.footer-img2 {
+  width: 30px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.footer-img2:hover {
+  border: solid $white 1px;
+}
+
+.footer-img3 {
+  width: 30px;
+  height: 55px;
+  margin-right: 1rem;
+  margin-top: 20px;
+}
+
+.footer-img3:hover {
+  border: solid $white 1px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+}
